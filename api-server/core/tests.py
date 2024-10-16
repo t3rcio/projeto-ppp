@@ -44,6 +44,12 @@ class TestCenarios(TestCase):
         result = obtem_arquivos_submetidos()
         self.assertEqual(result, correct)
     
+    def test_obtem_arquivos_submetidos_paginados(self):
+        correct = os.listdir(settings.UPLOADED_FILES_DIR)
+        result = obtem_arquivos_submetidos()
+        paginated_result = paginate_items(result)
+        self.assertEqual(paginated_result.get(1, []), correct)    
+
     def test_paginacao_lista_items(self):
         PAGE_SIZE = 30
         items = list(range(0,100))
