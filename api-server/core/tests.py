@@ -6,7 +6,7 @@ import os
 from core.scripts import obtem_size, obtem_arquivos_submetidos, obtem_users_ordered
 from core.paging import paginate_items, PAGE_SIZE
 
-class TestObtemMaiorUsuarioSize(TestCase):
+class TestCenarios(TestCase):
 
     def setUp(self):
         self.input_file = settings.UPLOADED_FILES_DIR + '/input'
@@ -45,22 +45,22 @@ class TestObtemMaiorUsuarioSize(TestCase):
         self.assertEqual(result, correct)
     
     def test_paginacao_lista_items(self):
-        PAGE_SIZE = 3
+        PAGE_SIZE = 30
         items = list(range(0,100))
-        paginated_result = paginate_items(items, PAGE_SIZE)
-        correct = list(range(0,34))
-        pages_correct = 34
+        paginated_result = paginate_items(items, PAGE_SIZE)        
+        correct = list(range(0,30))
+        pages_correct = 4
         pages_result = len(paginated_result.keys())
         self.assertEqual(paginated_result.get(1, []), correct)
         self.assertEqual(pages_result, pages_correct)
     
     def test_lista_arquivos_paginada(self):
-        # Usa a PAGE_SIZE definida no settings
+        # Usa a PAGE_SIZE definida no settings: 50 items por pagina
         arquivos = ['input' + str(i) for i in list(range(0,500))]
-        correct = ['input' + str(i) for i in list(range(0,100))]
+        correct = ['input' + str(i) for i in list(range(0,50))]
         qtd_paginas = len(arquivos) / PAGE_SIZE
 
-        paginated_result = paginate_items(arquivos)
+        paginated_result = paginate_items(arquivos)        
         self.assertEqual(
             correct,
             paginated_result.get(1, [])
@@ -69,8 +69,3 @@ class TestObtemMaiorUsuarioSize(TestCase):
             qtd_paginas,
             len(paginated_result)
         )
-
-    def test_users_ordered(self):
-        pass
-
-

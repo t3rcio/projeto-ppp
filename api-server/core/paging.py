@@ -20,7 +20,7 @@ def paginate_items(items:list, page_size:int = None) -> dict:
     for i in list(range(0, quantas_paginas)):        
         start = (i*pg_size)
         end = (pg_size * (i+1))
-        if len(items) > end:
+        if end > len(items):
             end = len(items) - 1
         
         __items = items[start:end]
