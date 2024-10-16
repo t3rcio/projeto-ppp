@@ -254,7 +254,7 @@ Para rodar a API num container, execute:
     $ docker-compose up --build -d 
 
 Acesse a API no browser:
-http://localhost:8000/api/doc
+http://localhost:8000
 
 ## Testes
 ** Submeta um arquivo "input" na pasta api-server/uploaded_files ;-)
@@ -267,3 +267,9 @@ Para executar os testes relacionados aos scripts de backend da API:
 Para executar os testes relacionados à API no Postman
 
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/:19422414-7585b41c-edd2-463d-896c-f461e09e7cd0)
+
+
+## Melhorias
+1) Adicionar logs de erros;
+2) Adicionar testes automatizados dos endpoints: atualmente temos apenas testes unitários relacionados aos scripts bash;
+3) Uma lib interessante para testes: https://pypi.org/project/responses/
