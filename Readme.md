@@ -239,9 +239,11 @@ http://localhost:8000/api/doc
 ## Testes
 ** Submeta um arquivo "input" na pasta api-server/uploaded_files ;-)
 
-Para executar os testes relacionados à API:
+Para executar os testes relacionados aos scripts de backend da API:
 
     $ python manage.py test
 
-Postman
+
+Para executar os testes relacionados à API no Postman
+
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/:19422414-7585b41c-edd2-463d-896c-f461e09e7cd0)
