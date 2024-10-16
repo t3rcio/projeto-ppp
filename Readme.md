@@ -224,7 +224,9 @@ Exemplo: Tentando obter um arquivo inexistente
     $ curl http://localhost:8000/api/upload/umarquivoqualquer
     Arquivo não encontrado%
 2 - Documentação da API:
+
 Acesse: /api/docs
+
 Uma tela do swagger será exibida
 
 ## Docker
