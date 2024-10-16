@@ -3,7 +3,7 @@ import os
 import re
 import sys
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse, FileResponse
 from django.conf import settings
 
@@ -73,6 +73,13 @@ def _404(text):
     response.status = 404
     response.content = text
     return response
+
+@api.get('/')
+def api_swagger_docs(request):
+    ''' 
+    Swagger Docs
+    '''
+    return redirect('/api/docs')
 
 @api.put('upload')
 def upload_file(request, filename:str):
@@ -248,4 +255,3 @@ def get_users_by_inbox_size(request, filename:str, min:int, max:int, limit:int =
         }
     
     return JsonResponse(_response, safe=False)
-    
