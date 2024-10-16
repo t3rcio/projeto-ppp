@@ -55,7 +55,9 @@ Exemplo:
 
 1 – Desenvolver um recurso para upload de arquivo, o mesmo só permitirá arquivos de nome com caracteres A-Z, a-z, 0-9, - (hífen) e _ (underline). O arquivo deverá ser salvo em uma pasta que aplicação criará (exemplo: /tmp/teste-api):
 **Endpoint:** /api/upload/filename
+
 **Method:** PUT
+
 **Responses:**
 |Status|Resultado| 
 |--|--|
@@ -72,7 +74,9 @@ Exemplo:
 
 2 - Desenvolver um recurso para listagem de arquivos armazenados (Bônus: implementar um mecanismo de paginação):
 **Endpoint:** /api/arquivos
+
 **Method:** GET
+
 **Response:**
 |Status|Resultado| 
 |--|--|
@@ -95,7 +99,9 @@ Exemplo 3 - página não existe:
 
 3 – Desenvolver um recurso para obter usuário com tamanho maior size (Bônus: desenvolver também um recurso para menor size), deverá receber o nome de um arquivo que foi armazenado para ser processado utilizando script desenvolvido anteriormente:
 **Endpoint:** /api/users/filename/[min|max]
+
 **Method:** GET
+
 **Response:**
 |Status|Content| 
 |--|--|
@@ -120,7 +126,9 @@ Exemplo 3: buscando num arquivo que não existe
 parâmetro para filtro pelo username), deverá receber o nome de um arquivo que foi armazenado
 para ser processado utilizando script desenvolvido anteriormente:
 **Endpoint:** /api/users/ordered/filename/[page|search|limit]=value
+
 **Method:** GET
+
 **Response:**
 
 Obrigatórios
@@ -169,7 +177,9 @@ Exemplo 5: limitando a quantidade de items retornados
 
 5 - Desenvolver um recurso para obter a lista de usuários entre uma faixa de quantidade de mensagens na INBOX (Bônus: 1 -implementar um mecanismos de paginação; 2 - parâmetro para filtro pelo username), deverá receber o nome de um arquivo que foi armazenado para ser processado utilizando script desenvolvido  anteriormente:
 **Endpoint:** /api/users/inbox/[filename]/[min]/[max]
+
 **Method:** GET
+
 **Response:**
 
 Obrigatórios
@@ -210,7 +220,9 @@ Exemplo 3: limitando a quantidade de registros
 
 1 – Obtém o arquivo submetido:
 **Endpoint:** /api/upload/[filename]
+
 **Method:** GET
+
 **Response:**
 
 Exemplo: Obtendo arquivo "input" submetido
