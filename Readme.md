@@ -54,6 +54,7 @@ Exemplo:
     http://localhost:8000/api/docs
 
 1 – Desenvolver um recurso para upload de arquivo, o mesmo só permitirá arquivos de nome com caracteres A-Z, a-z, 0-9, - (hífen) e _ (underline). O arquivo deverá ser salvo em uma pasta que aplicação criará (exemplo: /tmp/teste-api):
+
 **Endpoint:** /api/upload/filename
 
 **Method:** PUT
@@ -73,6 +74,7 @@ Exemplo:
     $ nome de arquivo invalido%
 
 2 - Desenvolver um recurso para listagem de arquivos armazenados (Bônus: implementar um mecanismo de paginação):
+
 **Endpoint:** /api/arquivos
 
 **Method:** GET
@@ -98,6 +100,7 @@ Exemplo 3 - página não existe:
     $ {"arquivos": [], "total_paginas": 12}%  
 
 3 – Desenvolver um recurso para obter usuário com tamanho maior size (Bônus: desenvolver também um recurso para menor size), deverá receber o nome de um arquivo que foi armazenado para ser processado utilizando script desenvolvido anteriormente:
+
 **Endpoint:** /api/users/filename/[min|max]
 
 **Method:** GET
@@ -125,6 +128,7 @@ Exemplo 3: buscando num arquivo que não existe
 1 - permitir também ordenar de forma decrescente; 2 - implementar um mecânimos de paginação, 3 –
 parâmetro para filtro pelo username), deverá receber o nome de um arquivo que foi armazenado
 para ser processado utilizando script desenvolvido anteriormente:
+
 **Endpoint:** /api/users/ordered/filename/[page|search|limit]=value
 
 **Method:** GET
@@ -176,6 +180,7 @@ Exemplo 5: limitando a quantidade de items retornados
     {"users": [{"user": "aadmoq@uol.com.br", "folder": "inbox", "numberMessages": 10030343, "size": 12115112}, {"user": "aasurari@uol.com.br", "folder": "inbox", "numberMessages": 14415, "size": 2331211}], "total_paginas": 6}% 
 
 5 - Desenvolver um recurso para obter a lista de usuários entre uma faixa de quantidade de mensagens na INBOX (Bônus: 1 -implementar um mecanismos de paginação; 2 - parâmetro para filtro pelo username), deverá receber o nome de um arquivo que foi armazenado para ser processado utilizando script desenvolvido  anteriormente:
+
 **Endpoint:** /api/users/inbox/[filename]/[min]/[max]
 
 **Method:** GET
@@ -219,6 +224,7 @@ Exemplo 3: limitando a quantidade de registros
 ## Extras (não solicitados, mas úteis):
 
 1 – Obtém o arquivo submetido:
+
 **Endpoint:** /api/upload/[filename]
 
 **Method:** GET
