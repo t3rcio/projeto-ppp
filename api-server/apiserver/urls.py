@@ -20,5 +20,6 @@ from core import views as v1
 
 urlpatterns = [
     #path('admin', include('admin.site.urls')),
+    path('', v1.api_swagger_docs),    
     path('api/', v1.api.urls)
 ]
